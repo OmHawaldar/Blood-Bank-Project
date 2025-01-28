@@ -9,7 +9,7 @@ function Donor() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    setDonors([...donors, { name, bloodGroup, lastDonationDate }]);
+    setDonors([...donors, { name, bloodGroup, lastDonationDate, status: 'Pending' }]);
     setName('');
     setBloodGroup('');
     setLastDonationDate('');
@@ -40,6 +40,7 @@ function Donor() {
             <th>Name</th>
             <th>Blood Group</th>
             <th>Last Donation Date</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -48,6 +49,7 @@ function Donor() {
               <td>{donor.name}</td>
               <td>{donor.bloodGroup}</td>
               <td>{donor.lastDonationDate}</td>
+              <td>{donor.status}</td>
             </tr>
           ))}
         </tbody>
