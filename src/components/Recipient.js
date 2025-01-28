@@ -9,11 +9,12 @@ function Recipient() {
 
   const handleRequest = (e) => {
     e.preventDefault();
-    setRequests([...requests, { name, bloodGroup, requestDate }]);
+    setRequests([...requests, { name, bloodGroup, requestDate, status: 'Pending' }]);
     setName('');
     setBloodGroup('');
     setRequestDate('');
   };
+
   return (
     <div>
       <h1>Recipient Page</h1>
@@ -39,6 +40,7 @@ function Recipient() {
             <th>Name</th>
             <th>Blood Group</th>
             <th>Request Date</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -47,6 +49,7 @@ function Recipient() {
               <td>{request.name}</td>
               <td>{request.bloodGroup}</td>
               <td>{request.requestDate}</td>
+              <td>{request.status}</td>
             </tr>
           ))}
         </tbody>
@@ -56,4 +59,3 @@ function Recipient() {
 }
 
 export default Recipient;
-  
