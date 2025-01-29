@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import './App.css';
 import Donor from './components/Donor';
 import Recipient from './components/Recipient';
 import Admin from './components/Admin';
