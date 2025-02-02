@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "blood_bank_backend": {
+      "candid": "src/blood_bank_backend/blood_bank_backend.did",
+      "package": "blood_bank_backend",
+      "type": "rust"
+    },
+    "blood_bank_frontend": {
+      "dependencies": [
+        "blood_bank_backend"
+      ],
+      "source": [
+        "src/blood_bank_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "blood_bank_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

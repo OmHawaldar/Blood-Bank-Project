@@ -1,0 +1,7 @@
+service : {
+    register_donor: (nat, text, text, text) -> (text);
+    check_blood_availability: (text) -> (nat) query;
+    request_blood: (nat, text, text, nat) -> (text);
+    get_all_requests: () -> (vec record { nat; text; text; nat; text }) query;
+    get_all_donors: () -> (vec record { nat; text; text; text }) query;
+};
